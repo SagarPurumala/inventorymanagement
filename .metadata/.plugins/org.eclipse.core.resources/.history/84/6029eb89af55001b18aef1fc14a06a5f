@@ -1,0 +1,13 @@
+package com.capg.inventory.config;
+
+public class inventoryconfig {
+
+	@Bean
+	public LocalEntityManagerFactoryBean getEMF() {
+		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
+		factoryBean.setPersistenceUnitName("ars");
+
+		return factoryBean;
+
+	}
+}

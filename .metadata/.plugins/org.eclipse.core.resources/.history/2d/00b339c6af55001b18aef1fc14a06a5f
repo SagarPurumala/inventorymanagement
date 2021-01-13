@@ -1,0 +1,15 @@
+package com.capg.inventory.config;
+
+import org.springframework.context.annotation.Bean;
+@Configuration
+public class inventoryconfig {
+
+	@Bean
+	public LocalEntityManagerFactoryBean getEMF() {
+		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
+		factoryBean.setPersistenceUnitName("ars");
+
+		return factoryBean;
+
+	}
+}
