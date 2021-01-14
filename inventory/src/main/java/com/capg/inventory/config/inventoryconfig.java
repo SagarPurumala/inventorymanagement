@@ -10,7 +10,7 @@ public class inventoryconfig {
 	@Bean
 	public LocalEntityManagerFactoryBean getEMF() {
 		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();
-		factoryBean.setPersistenceUnitName("ars");
+		factoryBean.setPersistenceUnitName("irs");
 
 		return factoryBean;
 
