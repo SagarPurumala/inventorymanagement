@@ -1,0 +1,18 @@
+package com.capg.inventory.dao;
+
+import com.capg.inventory.beans.Product;
+
+public interface MerchantDAO {
+    public Product getProduct(String productId);
+
+	public boolean addFlight(Product flightInformation);
+
+	public boolean updateFlight(Product flightInformation);
+
+	public boolean deleteFlight(String flightNumber);
+	
+	public List<FlightDetails> getAllFlights();
+	
+	
+
+}

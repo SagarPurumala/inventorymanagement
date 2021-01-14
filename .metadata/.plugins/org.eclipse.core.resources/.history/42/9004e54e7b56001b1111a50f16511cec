@@ -1,0 +1,42 @@
+package com.capg.inventory.dao;
+
+import java.util.List;
+
+import com.capg.inventory.beans.Product;
+
+public class MerchantDAOImpl implements MerchantDAO{
+	
+	@PersistenceUnit
+	private EntityManagerFactory emf;
+
+	@Override
+	public Product getProduct(String productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addProduct(Product productInformation) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateProduct(Product productInformation) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteProduct(String productId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Product> viewProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
