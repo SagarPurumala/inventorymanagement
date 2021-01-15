@@ -14,12 +14,12 @@ public class Product {
 	@Id
 	@Column(name = "product_id")
 	private String id;
-	@Column(name = "product_name")
+	@Column(name = "product_id")
   private String name;
-	@Column(name = "product_tag")
+	@Column(name = "product_id")
   private String tag;
-	@Column(name = "product_price")
+	@Column(name = "product_id")
   private int price;
-	@Column(name = "product_size")
+	@Column(name = "product_id")
   private String size;
 }
