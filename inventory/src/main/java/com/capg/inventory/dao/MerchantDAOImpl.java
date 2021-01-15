@@ -8,8 +8,10 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.Query;
 
-import com.capg.inventory.beans.Product;
+import org.springframework.stereotype.Repository;
 
+import com.capg.inventory.beans.Product;
+@Repository
 public class MerchantDAOImpl implements MerchantDAO{
 	
 	@PersistenceUnit
@@ -17,8 +19,10 @@ public class MerchantDAOImpl implements MerchantDAO{
 
 	@Override
 	public Product getProduct(String productId) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager manager = emf.createEntityManager();
+		Product productInformation = manager.find(Product.class, productId);
+		manager.close();
+		return productInformation;
 	}
 
 	@Override

@@ -715,3 +715,9 @@ Contains: Missing org.hibernate.common:hibernate-commons-annotations:jar:javadoc
 !MESSAGE Could not resolve artifact org.hibernate.common:hibernate-commons-annotations:jar:javadoc:5.1.2.Final
 !SUBENTRY 2 org.eclipse.m2e.core 4 -1 2021-01-15 10:46:02.548
 !MESSAGE Missing org.hibernate.common:hibernate-commons-annotations:jar:javadoc:5.1.2.Final
+
+!ENTRY org.eclipse.jface.text 2 0 2021-01-15 12:38:48.955
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2021-01-15 12:38:49.020
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

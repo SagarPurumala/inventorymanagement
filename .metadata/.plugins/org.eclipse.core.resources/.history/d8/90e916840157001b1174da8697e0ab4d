@@ -1,0 +1,6 @@
+package com.capg.inventory.controller;
+@RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*", allowCredentials = "true")
+public class MerchantController {
+
+}

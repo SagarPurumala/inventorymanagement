@@ -1,0 +1,12 @@
+package com.capg.inventory.response;
+
+public class MerchantResponse {
+ 
+	private int statusCode;
+	private String message;
+	private String description;
+	private String bookingid;
+	private double totalFare;
+	private Product flightInformation;
+	private List<FlightDetails> searchFlight;
+}
