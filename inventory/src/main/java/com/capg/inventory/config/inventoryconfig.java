@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 
 @Configuration
-public class inventoryconfig {
+public class inventoryConfig {
 
 	@Bean
 	public LocalEntityManagerFactoryBean getEMF() {
