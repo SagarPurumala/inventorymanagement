@@ -19,8 +19,6 @@ public class ProductDto {
 	private String productName;
 	@Column(name = "product_tag")
     private String productTag;
-	@Column(name = "product_description")
-    private String productDescription;
 	@Column(name="discount")
 	private Integer discount;
 	@Column(name = "product_originalprice")

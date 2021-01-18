@@ -19,14 +19,10 @@ public class ProductDto {
 	private String productName;
 	@Column(name = "product_tag")
     private String productTag;
-	@Column(name = "product_description")
-    private String productDescription;
 	@Column(name="discount")
 	private Integer discount;
-	@Column(name = "product_originalprice")
-	private float originalPrice;
-	@Column(name = "product_discountprice")
-	private float discountprice;
+	@Column(name = "product_price")
+	private float price;
 	@Column(name = "product_size")
     private String size;
 	@Column(name = "product_quantity")

@@ -21,10 +21,6 @@ public class MerchantServiceImpl implements MerchantService{
 	@Override
 	public boolean addProduct(ProductDto productInformation) {
 		// TODO Auto-generated method stub
-		int d=productInformation.getDiscount();
-		float p=productInformation.getOriginalPrice();
-		float discounted=(p-((d*p)/100));
-		productInformation.setDiscountprice(discounted);
 		return merchantDao.addProduct(productInformation);
 	}
 

@@ -55,9 +55,18 @@ public class MerchantDAOImpl implements MerchantDAO{
 
 			if (productInfo != null) {
 				if (productInformation.getProductId()!= null) {
-					System.out.println(productInformation.getProductId());
-					productInfo.setProductId(productInformation.getProductId());
-					
+					System.out.println(productInformation.getAirline());
+					productInfo.setDepartureDate(flightInformation.getDepartureDate());
+					productInfo.setDepartureTime(flightInformation.getDepartureTime());
+					productInfo.setAirline(flightInformation.getAirline());
+					flightInfo.setArrivalCity(flightInformation.getArrivalCity());
+					flightInfo.setDepartureCity(flightInformation.getDepartureCity());
+					flightInfo.setBussinessClassFare(flightInformation.getBussinessClassFare());
+					flightInfo.setBussinessClassSeats(flightInformation.getBussinessClassSeats());
+					flightInfo.setFirstClassSeatFare(flightInformation.getFirstClassSeatFare());
+					flightInfo.setFirstClassSeats(flightInformation.getFirstClassSeats());
+					flightInfo.setArrivalDate(flightInformation.getArrivalDate());
+					flightInfo.setArrivalTime(flightInformation.getArrivalTime());
 					
 					manager.persist(productInfo);
 					isUpdated = true;

@@ -24,7 +24,6 @@ public class MerchantServiceImpl implements MerchantService{
 		int d=productInformation.getDiscount();
 		float p=productInformation.getOriginalPrice();
 		float discounted=(p-((d*p)/100));
-		productInformation.setDiscountprice(discounted);
 		return merchantDao.addProduct(productInformation);
 	}
 
