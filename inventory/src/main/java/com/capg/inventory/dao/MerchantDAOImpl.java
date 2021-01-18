@@ -10,7 +10,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
-import com.capg.inventory.beans.Product;
+import com.capg.inventory.beans.ProductDto;
 @Repository
 public class MerchantDAOImpl implements MerchantDAO{
 	
@@ -18,15 +18,15 @@ public class MerchantDAOImpl implements MerchantDAO{
 	private EntityManagerFactory emf;
 
 	@Override
-	public Product getProduct(String productId) {
+	public ProductDto getProduct(Integer productId) {
 		EntityManager manager = emf.createEntityManager();
-		Product productInformation = manager.find(Product.class, productId);
+		ProductDto productInformation = manager.find(ProductDto.class, productId);
 		manager.close();
 		return productInformation;
 	}
 
 	@Override
-	public boolean addProduct(Product product) {
+	public boolean addProduct(ProductDto product) {
 		EntityManager manager = emf.createEntityManager();
 		EntityTransaction tx = manager.getTransaction();
 		try {
@@ -43,15 +43,15 @@ public class MerchantDAOImpl implements MerchantDAO{
 	}
 
 	@Override
-	public boolean updateProduct(Product productInformation) {
+	public boolean updateProduct(ProductDto productInformation) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean deleteProduct(String productId) {
+	public boolean deleteProduct(Integer productId) {
 		EntityManager entityManager = emf.createEntityManager();
-		Product productInformation = entityManager.find(Product.class, productId);
+		ProductDto productInformation = entityManager.find(ProductDto.class, productId);
 		boolean isDeleted = false;
 
 		try {
@@ -71,12 +71,12 @@ public class MerchantDAOImpl implements MerchantDAO{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Product> viewProducts() {
+	public List<ProductDto> viewProducts() {
 		EntityManager manager = emf.createEntityManager();
 		String jpql = "from Product";
 		Query query = manager.createQuery(jpql);
 
-		List<Product> productList = null;
+		List<ProductDto> productList = null;
 		try {
 			productList = query.getResultList();
 

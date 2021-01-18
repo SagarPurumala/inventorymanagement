@@ -2,7 +2,7 @@ package com.capg.inventory.response;
 
 import java.util.List;
 
-import com.capg.inventory.beans.Product;
+import com.capg.inventory.beans.ProductDto;
 
 import lombok.Data;
 @Data
@@ -13,6 +13,6 @@ public class MerchantResponse {
 	private String description;
 	private String productId;
 	private double totalFare;
-	private Product producttInformation;
-	private List<Product> searchProduct;
+	private ProductDto producttInformation;
+	private List<ProductDto> searchProduct;
 }

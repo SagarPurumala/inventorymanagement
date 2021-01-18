@@ -2,18 +2,18 @@ package com.capg.inventory.dao;
 
 import java.util.List;
 
-import com.capg.inventory.beans.Product;
+import com.capg.inventory.beans.ProductDto;
 
 public interface MerchantDAO {
-    public Product getProduct(String productId);
+    public ProductDto getProduct(Integer productId);
 
-	public boolean addProduct(Product productInformation);
+	public boolean addProduct(ProductDto productInformation);
 
-	public boolean updateProduct(Product productInformation);
+	public boolean updateProduct(ProductDto productInformation);
 
-	public boolean deleteProduct(String productId);
+	public boolean deleteProduct(Integer productId);
 	
-	public List<Product> viewProducts();
+	public List<ProductDto> viewProducts();
 
 	
 

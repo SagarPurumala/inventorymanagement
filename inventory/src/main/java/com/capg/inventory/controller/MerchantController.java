@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.capg.inventory.beans.Product;
+import com.capg.inventory.beans.ProductDto;
 import com.capg.inventory.response.MerchantResponse;
 import com.capg.inventory.service.MerchantService;
 
@@ -23,8 +23,8 @@ public class MerchantController {
 	private MerchantService service;
 	
 	@GetMapping("/getProduct")
-	public MerchantResponse getProduct(String productId) {
-		Product productInformation = service.getProduct(productId);
+	public MerchantResponse getProduct(Integer productId) {
+		ProductDto productInformation = service.getProduct(productId);
 		MerchantResponse response = new MerchantResponse();
 		if (productInformation != null) {
 			response.setStatusCode(210);
@@ -43,7 +43,7 @@ public class MerchantController {
 	
 	@DeleteMapping("/deleteProduct")
 
-	public MerchantResponse deleteProduct(String productId) {
+	public MerchantResponse deleteProduct(Integer productId) {
 		boolean isDeleted = service.deleteProduct(productId);
 
 		MerchantResponse response = new MerchantResponse();
@@ -60,11 +60,11 @@ public class MerchantController {
 		return response;
 	}
 	@PutMapping(path = "/updateProduct")
-	public boolean updateProduct(@RequestBody Product productInformation) {
+	public boolean updateProduct(@RequestBody ProductDto productInformation) {
 		return service.updateProduct(productInformation);
 	}
-	@PostMapping("/addFlight")
-	public MerchantResponse addProduct(@RequestBody Product productInformation) {
+	@PostMapping("/addProduct")
+	public MerchantResponse addProduct(@RequestBody ProductDto productInformation) {
 		boolean isAdded = service.addProduct(productInformation);
 
 		MerchantResponse response = new MerchantResponse();
@@ -85,7 +85,7 @@ public class MerchantController {
 	@GetMapping("/getAllProducts")
 	public MerchantResponse getAllProduct() {
 
-		List<Product> productList = service.viewProducts();
+		List<ProductDto> productList = service.viewProducts();
 
 		MerchantResponse response = new MerchantResponse();
 		if (productList != null && !productList.isEmpty()) {

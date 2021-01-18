@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.capg.inventory.beans.Product;
+import com.capg.inventory.beans.ProductDto;
 import com.capg.inventory.dao.MerchantDAO;
 @Service
 public class MerchantServiceImpl implements MerchantService{
@@ -13,31 +13,31 @@ public class MerchantServiceImpl implements MerchantService{
     private MerchantDAO merchantDao;
 	
 	@Override
-	public Product getProduct(String productId) {
+	public ProductDto getProduct(Integer productId) {
 		// TODO Auto-generated method stub
 		return merchantDao.getProduct(productId);
 	}
 
 	@Override
-	public boolean addProduct(Product productInformation) {
+	public boolean addProduct(ProductDto productInformation) {
 		// TODO Auto-generated method stub
 		return merchantDao.addProduct(productInformation);
 	}
 
 	@Override
-	public boolean updateProduct(Product productInformation) {
+	public boolean updateProduct(ProductDto productInformation) {
 		// TODO Auto-generated method stub
 		return merchantDao.updateProduct(productInformation);
 	}
 
 	@Override
-	public boolean deleteProduct(String productId) {
+	public boolean deleteProduct(Integer productId) {
 		// TODO Auto-generated method stub
 		return merchantDao.deleteProduct(productId);
 	}
 
 	@Override
-	public List<Product> viewProducts() {
+	public List<ProductDto> viewProducts() {
 		// TODO Auto-generated method stub
 		return merchantDao.viewProducts();
 	}
