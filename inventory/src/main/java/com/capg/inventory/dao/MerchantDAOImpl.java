@@ -73,7 +73,7 @@ public class MerchantDAOImpl implements MerchantDAO{
 	@Override
 	public List<ProductDto> viewProducts() {
 		EntityManager manager = emf.createEntityManager();
-		String jpql = "from Product";
+		String jpql = "from ProductDto";
 		Query query = manager.createQuery(jpql);
 
 		List<ProductDto> productList = null;
