@@ -1,0 +1,34 @@
+package com.capg.inventory.beans;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "product_info")
+public class ProductDto {
+
+	@Id
+	@Column(name = "product_id")
+	private Integer productId;
+	@Column(name = "product_name")
+	private String productName;
+	@Column(name = "product_tag")
+    private String productTag;
+	@Column(name = "product_price")
+	private float price;
+	@Column(name = "product_size")
+    private String size;
+	@Column(name = "product_quantity")
+	private Integer quantity;
+	@Column(name = "product_category")
+	private String category;
+	@Column(name = "merchant_id")
+	private Integer merchantId;
+	@Column(name = "product_image")
+	private byte[] image;
+}

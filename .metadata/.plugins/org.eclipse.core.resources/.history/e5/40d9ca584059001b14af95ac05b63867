@@ -1,0 +1,25 @@
+package com.capg.inventory.beans;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "product_info")
+public class Product {
+	@Id
+	@Column(name = "product_id")
+	private String id;
+	@Column(name = "product_name")
+  private String name;
+	@Column(name = "product_tag")
+  private String tag;
+	@Column(name = "product_price")
+  private int price;
+	@Column(name = "product_size")
+  private String size;
+}
