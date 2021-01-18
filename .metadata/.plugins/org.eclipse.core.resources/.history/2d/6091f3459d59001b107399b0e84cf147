@@ -18,8 +18,7 @@ import com.capg.inventory.response.MerchantResponse;
 import com.capg.inventory.service.MerchantService;
 
 @RestController
-//@CrossOrigin(origins = "*", allowedHeaders = "*", allowCredentials = "true")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*", allowCredentials = "true")
 public class MerchantController {
 	
 	@Autowired

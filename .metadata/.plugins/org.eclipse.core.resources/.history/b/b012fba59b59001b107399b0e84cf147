@@ -1,6 +1,5 @@
 package com.capg.inventory.controller;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,6 @@ import com.capg.inventory.service.MerchantService;
 
 @RestController
 //@CrossOrigin(origins = "*", allowedHeaders = "*", allowCredentials = "true")
-@CrossOrigin(origins = "*")
 public class MerchantController {
 	
 	@Autowired
@@ -67,8 +65,7 @@ public class MerchantController {
 		return service.updateProduct(productInformation);
 	}
 	@PostMapping("/addProduct")
-	public MerchantResponse addProduct(@RequestBody ProductDto productInformation) {
-		//productInformation.setImage(file.getBytes());
+	public MerchantResponse addProduct(@RequestBody ProductDto productInformation, MultipartFile file) {
 		boolean isAdded = service.addProduct(productInformation);
 
 		MerchantResponse response = new MerchantResponse();

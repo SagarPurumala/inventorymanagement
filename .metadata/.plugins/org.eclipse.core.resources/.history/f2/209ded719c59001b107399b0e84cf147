@@ -19,7 +19,6 @@ import com.capg.inventory.service.MerchantService;
 
 @RestController
 //@CrossOrigin(origins = "*", allowedHeaders = "*", allowCredentials = "true")
-@CrossOrigin(origins = "*")
 public class MerchantController {
 	
 	@Autowired
@@ -67,8 +66,8 @@ public class MerchantController {
 		return service.updateProduct(productInformation);
 	}
 	@PostMapping("/addProduct")
-	public MerchantResponse addProduct(@RequestBody ProductDto productInformation) {
-		//productInformation.setImage(file.getBytes());
+	public MerchantResponse addProduct(@RequestBody ProductDto productInformation, MultipartFile file) throws IOException {
+		productInformation.setImage(file.getBytes());
 		boolean isAdded = service.addProduct(productInformation);
 
 		MerchantResponse response = new MerchantResponse();

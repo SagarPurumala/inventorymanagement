@@ -65,8 +65,6 @@ public class MerchantDAOImpl implements MerchantDAO{
 					productInfo.setOriginalPrice(productInformation.getOriginalPrice());
 					productInfo.setMerchantId(productInformation.getMerchantId());
 					productInfo.setImage(productInformation.getImage());
-					productInfo.setQuantity(productInformation.getQuantity());
-					productInfo.setSize(productInformation.getSize());
 					
 					
 					manager.persist(productInfo);
