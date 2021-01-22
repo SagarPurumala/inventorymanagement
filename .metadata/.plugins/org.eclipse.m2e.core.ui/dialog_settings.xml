@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Sagar\Desktop\inventory"/>
+			<item value="C:\Users\Sagar\Desktop\inventory\ims"/>
 			<item value="C:\Users\Sagar\Desktop\inventory\inventory"/>
 		</list>
 		<list key="projectNameTemplate">

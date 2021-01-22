@@ -14,5 +14,6 @@ public class MerchantResponse {
 	private String productId;
 	private double totalFare;
 	private ProductDto producttInformation;
+	
 	private List<ProductDto> searchProduct;
 }

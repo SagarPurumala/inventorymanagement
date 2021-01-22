@@ -2,8 +2,12 @@ package com.capg.inventory.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
@@ -14,6 +18,7 @@ public class ProductDto {
 
 	@Id
 	@Column(name = "product_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer productId;
 	@Column(name = "product_name")
 	private String productName;
@@ -35,6 +40,6 @@ public class ProductDto {
 	private String category;
 	@Column(name = "merchant_id")
 	private Integer merchantId;
-	@Column(name = "product_image")
+	@Column(name = "product_image", length = 1000)
 	private byte[] image;
 }
